@@ -1,16 +1,17 @@
 import React from "react";
 import { useState } from "react-dom/client";
-import './App.css'; // Import the CSS file
+import './App.css';
+import { SocialIcon } from 'react-social-icons';
 
 function Footer() {
   return (
     <>
       <section className="footer">
         <div className="social">
-          <a href="#"><i className="fa-brands fa-instagram"></i></a>
-          <a href="#"><i className="fa-brands fa-x-twitter"></i></a>
-          <a href="#"><i className="fa-brands fa-facebook-messenger"></i></a>
-          <a href="#"><i className="fa-brands fa-whatsapp"></i></a>
+          <SocialIcon url="https://instagram.com" />
+          <SocialIcon url="https://x.com" />
+          <SocialIcon url="https://facebook.com/messenger" />
+          <SocialIcon url="https://github.com" />
         </div>
 
         <p className="copyright">Derrick @2025</p>

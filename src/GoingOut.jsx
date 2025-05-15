@@ -16,7 +16,6 @@ function GoingOutPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-
   const [showPopup, setShowPopup] = useState(false);
 
   const apiKey = "74613d23be969520aba795220ef2679b";
@@ -102,18 +101,18 @@ function GoingOutPage() {
 
   const itemOptions = getItemOptions();
   const totalItems = itemOptions.length;
-  const progressValue = totalItems > 0 ? (selectedItems.length / totalItems) * 100 : 0;
-
+  const progressValue =
+    totalItems > 0 ? (selectedItems.length / totalItems) * 100 : 0;
 
   useEffect(() => {
-  if (progressValue === 100) {
-    setShowPopup(true);
-    const timer = setTimeout(() => {
-      setShowPopup(false);
-    }, 3000);
-    return () => clearTimeout(timer);
-  }
-}, [progressValue]);
+    if (progressValue === 100) {
+      setShowPopup(true);
+      const timer = setTimeout(() => {
+        setShowPopup(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [progressValue]);
 
   if (loading) {
     return (
@@ -146,7 +145,7 @@ function GoingOutPage() {
   }
 
   // Main UI
-   return (
+  return (
     <>
       <NavBar />
       <div className="going-out-page-container">
@@ -192,20 +191,17 @@ function GoingOutPage() {
             </ul>
           </div>
 
-          <div className="progress-bar-container" style={{ width: '100%', marginTop: '20px' }}>
+          <div
+            className="progress-bar-container"
+            style={{ width: "100%", marginTop: "20px" }}
+          >
             <div className="custom-progress-bar">
-              <div
-                className="fill"
-                style={{ width: `${progressValue}%` }}
-              />
+              <div className="fill" style={{ width: `${progressValue}%` }} />
             </div>
           </div>
 
-          
           {showPopup && (
-            <div className="popup-message">
-              Now you are all set!
-            </div>
+            <div className="popup-message">Now you are all set!</div>
           )}
         </div>
       </div>
