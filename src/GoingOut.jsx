@@ -119,7 +119,7 @@ function GoingOutPage() {
       <>
         <NavBar />
         <div className="going-out-page-container">
-          <h1>Let's Go Out!</h1>
+          <h1>Headed Out? Here's the weather forecast and what you'll need !!</h1>
           <div className="weather-items-container">
             Loading weather information...
           </div>
@@ -134,7 +134,7 @@ function GoingOutPage() {
       <>
         <NavBar />
         <div className="going-out-page-container">
-          <h1>Let's Go Out!</h1>
+          <h1>Headed Out? Here's the weather forecast and what you'll need !!</h1>
           <div className="weather-items-container">
             Error fetching weather data. Please try again later.
           </div>
@@ -149,7 +149,7 @@ function GoingOutPage() {
     <>
       <NavBar />
       <div className="going-out-page-container">
-        <h1>Let's Go Out!</h1>
+        <h1>Headed Out? Here's the weather forecast and what you'll need !!</h1>
         <div className="weather-items-container">
           <div className="weather-info">
             <h2>Today is {day}</h2>
@@ -169,7 +169,7 @@ function GoingOutPage() {
           </div>
 
           <div className="items-to-carry">
-            <h3>Items to consider carrying:</h3>
+            <h3>What's in your backpack ?</h3>
             <ul className="item-list">
               {itemOptions.map((item) => (
                 <li key={item} className="flex items-center space-x-2">
